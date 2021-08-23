@@ -2,6 +2,6 @@
 
 import React from "react";
 
-const PageBooks = () => <h1>PAGES BOOKS</h1>;
+const PageBooks = () => <p>PAGES BOOKS</p>;
 
 export default PageBooks;

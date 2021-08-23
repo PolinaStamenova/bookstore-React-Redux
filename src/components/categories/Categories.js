@@ -2,9 +2,6 @@
 
 import React from "react";
 
-// const Categories = () => <h1>Under construction</h1>;
-function Categories() {
-  return <h1>Under construction</h1>;
-}
+const Categories = () => <p>Under construction</p>;
 
 export default Categories;
