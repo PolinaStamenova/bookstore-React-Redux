@@ -2,6 +2,7 @@
 
 import React from "react";
 import Books from "./Books";
+import AddBook from "./AddBook";
 
 const books = [
   {
@@ -39,6 +40,7 @@ const books = [
 const BookInfo = () => (
   <div>
     <Books books={books} />
+    <AddBook />
   </div>
 );
 

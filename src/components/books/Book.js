@@ -2,13 +2,14 @@
 
 import PropTypes from "prop-types";
 import BookAction from "./BookAction";
+import BookProgress from "./BookProgress";
 
 const Book = ({ book }) => {
   const {
-    id, title, category, author,
+    id, title, category, author, progress,
   } = book;
   return (
-    <li key={id}>
+    <li key={id} className="book-list">
       <div className="book-info">
         <div>
           <p>{category}</p>
@@ -16,12 +17,7 @@ const Book = ({ book }) => {
           <p>{author}</p>
           <BookAction />
         </div>
-        <div className="book-progress">
-          <div>
-            <p>circle</p>
-            <div>progress</div>
-          </div>
-        </div>
+        <BookProgress progress={progress} />
       </div>
     </li>
   );
@@ -33,6 +29,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
+    progress: BookProgress.propTypes.progress,
   }).isRequired,
 };
 

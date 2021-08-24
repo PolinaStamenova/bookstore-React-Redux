@@ -1,8 +1,8 @@
 // /* eslint-disable quotes*/
 
 import PropTypes from 'prop-types';
-// import React from 'react';
 import Book from './Book';
+import './Books.css';
 
 const Books = ({ books }) => (
   <ul>
@@ -11,10 +11,6 @@ const Books = ({ books }) => (
     ))}
   </ul>
 );
-
-// Books.propTypes = {
-//   books: PropTypes.arrayOf(Book.propTypes.book).isRequired,
-// };
 
 Books.propTypes = {
   books: PropTypes.objectOf(Array).isRequired,
