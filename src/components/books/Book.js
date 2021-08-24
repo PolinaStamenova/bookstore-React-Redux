@@ -1,6 +1,7 @@
 /* eslint-disable quotes */
 
 import PropTypes from "prop-types";
+import BookAction from "./BookAction";
 
 const Book = ({ book }) => {
   const {
@@ -13,6 +14,7 @@ const Book = ({ book }) => {
           <p>{category}</p>
           <h4>{title}</h4>
           <p>{author}</p>
+          <BookAction />
         </div>
         <div className="book-progress">
           <div>
