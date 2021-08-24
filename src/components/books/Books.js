@@ -13,7 +13,7 @@ const Books = ({ books }) => (
 );
 
 Books.propTypes = {
-  books: PropTypes.objectOf(Array).isRequired,
+  books: PropTypes.arrayOf(Book.propTypes.book).isRequired,
 };
 
 export default Books;
