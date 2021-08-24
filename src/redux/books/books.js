@@ -1,37 +1,7 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const initialState = [
-  {
-    id: '1',
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suxanne Collins',
-    progress: {
-      currentChapter: 'Chapter 17',
-      completed: '64',
-    },
-  },
-  {
-    id: '2',
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    progress: {
-      currentChapter: 'Chapter 3: "A Lesson Learned"',
-      completed: '8',
-    },
-  },
-  {
-    id: '3',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    progress: {
-      currentChapter: 'Introduction',
-      completed: '0',
-    },
-  },
-];
+const initialState = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -50,7 +20,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         {
           ...action.payload,
-          author: 'NEW AUTHOR',
           progress: {
             currentChapter: 'NEW CHAPTER"',
             completed: '0',
