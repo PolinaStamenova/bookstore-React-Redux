@@ -1,0 +1,19 @@
+ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-progress {
+  display: flex;
+  gap: 8rem;
+}
+
+.book-progress-update {
+  width: 400px;
+}
