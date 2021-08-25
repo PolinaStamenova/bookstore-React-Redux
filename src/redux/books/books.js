@@ -1,5 +1,7 @@
-const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+/* eslint-disable quotes */
+
+const ADD_BOOK = "bookStore/books/ADD_BOOK";
+const REMOVE_BOOK = "bookStore/books/REMOVE_BOOK";
 
 const initialState = [];
 
@@ -22,7 +24,7 @@ const reducer = (state = initialState, action) => {
           ...action.payload,
           progress: {
             currentChapter: 'NEW CHAPTER"',
-            completed: '0',
+            completed: "0",
           },
         },
       ];

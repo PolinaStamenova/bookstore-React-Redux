@@ -7,12 +7,10 @@ import { removeBook } from "../../redux/books/books";
 const BookAction = ({ id }) => {
   const dispatch = useDispatch();
 
-  const handleRemove = () => dispatch(removeBook(id));
-
   return (
     <div className="book-action">
       <button type="button">Comments</button>
-      <button type="button" onClick={handleRemove}>
+      <button type="button" onClick={() => dispatch(removeBook(id))}>
         Remove
       </button>
       <button type="button">Edit</button>
