@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import Book from './Book';
+import './BookAction.css';
+import './BookProgress.css';
+import './AddBook.css';
 import './Books.css';
 
 const Books = ({ books }) => (
-  <ul>
+  <ul className="list">
     {books.map((book) => (
       <Book key={book.item_id} book={book} />
     ))}
