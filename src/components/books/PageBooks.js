@@ -1,7 +1,5 @@
-/* eslint-disable quotes */
-
-import React from "react";
-import BookInfo from "./BookInfo";
+import React from 'react';
+import BookInfo from './BookInfo';
 
 const PageBooks = () => <BookInfo />;
 

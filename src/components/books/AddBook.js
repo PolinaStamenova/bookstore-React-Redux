@@ -49,7 +49,6 @@ const AddBook = () => {
           placeholder="Categorie"
           onChange={(e) => setCategory(e.target.value)}
         >
-          {/* <option value="">Categorie</option> */}
           <option value="Action">Action</option>
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>

@@ -1,8 +1,6 @@
-/* eslint-disable quotes */
-
-const ADD_BOOK = "bookStore/books/ADD_BOOK";
-const REMOVE_BOOK = "bookStore/books/REMOVE_BOOK";
-const SET_BOOKS = "bookStore/books/SET_BOOKS";
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const SET_BOOKS = 'bookStore/books/SET_BOOKS';
 const initialState = [];
 
 export const addBook = (payload) => ({
@@ -27,10 +25,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         {
           ...action.payload,
-          author: "Author undefined",
+          author: 'Author undefined',
           progress: {
             currentChapter: 'NEW CHAPTER"',
-            completed: "0",
+            completed: '0',
           },
         },
       ];
@@ -41,10 +39,10 @@ const reducer = (state = initialState, action) => {
         item_id: key,
         title: value[0].title,
         category: value[0].category,
-        author: "Author undefiend",
+        author: 'Author undefiend',
         progress: {
-          currentChapter: "Introduction",
-          completed: "0",
+          currentChapter: 'Introduction',
+          completed: '0',
         },
       }));
       return saved;
