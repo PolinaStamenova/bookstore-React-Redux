@@ -10,21 +10,17 @@ const AddBook = () => {
   const [category, setCategory] = useState('Action');
 
   const createBook = (book) => {
-    console.log('Heeeelooooo');
     axios
       .post(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oJEPI79UO3J8dyQm6m6H/books',
         book,
       )
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
           dispatch(addBook(book));
         }
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => error);
   };
 
   const submitBookToStore = (e) => {
@@ -34,8 +30,6 @@ const AddBook = () => {
       title,
       category,
     };
-    book.id = book.item_id;
-    console.log(category);
     createBook(book);
     setTitle('');
   };

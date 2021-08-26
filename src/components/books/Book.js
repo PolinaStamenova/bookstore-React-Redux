@@ -4,7 +4,7 @@ import BookProgress from './BookProgress';
 
 const Book = ({ book }) => {
   const {
-    item_id: id, title, category, progress,
+    item_id: id, title, author, category, progress,
   } = book;
 
   return (
@@ -13,7 +13,7 @@ const Book = ({ book }) => {
         <div>
           <p>{category}</p>
           <h4>{title}</h4>
-          {/* <p>{author}</p> */}
+          <p>{author}</p>
           <BookAction id={id} />
         </div>
         <BookProgress progress={progress} />
@@ -26,6 +26,7 @@ Book.propTypes = {
   book: PropTypes.shape({
     item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     category: PropTypes.string,
     progress: BookProgress.propTypes.progress,
   }).isRequired,

@@ -11,18 +11,15 @@ const BookInfo = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const loadBooks = async () => {
-    console.log("//////////////");
     const books = await axios
       .get(
         "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oJEPI79UO3J8dyQm6m6H/books"
       )
       .then((res) => res.data);
-    console.log(books);
     dispatch(setBooks(books));
   };
   useEffect(() => {
     loadBooks();
-    console.log("heeello");
   }, []);
 
   return (
