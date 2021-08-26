@@ -23,9 +23,14 @@ const BookProgress = ({ progress }) => {
 
 BookProgress.propTypes = {
   progress: PropTypes.shape({
-    currentChapter: PropTypes.string.isRequired,
-    completed: PropTypes.string.isRequired,
-  }).isRequired,
+    currentChapter: PropTypes.string,
+    completed: PropTypes.string,
+  }),
 };
-
+BookProgress.defaultProps = {
+  progress: PropTypes.shape({
+    currentChapter: '0',
+    completed: 'Introduction',
+  }),
+};
 export default BookProgress;

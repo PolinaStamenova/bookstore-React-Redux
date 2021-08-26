@@ -1,13 +1,12 @@
-/* eslint-disable quotes */
-
-import PropTypes from "prop-types";
-import BookAction from "./BookAction";
-import BookProgress from "./BookProgress";
+import PropTypes from 'prop-types';
+import BookAction from './BookAction';
+import BookProgress from './BookProgress';
 
 const Book = ({ book }) => {
   const {
-    id, title, category, author, progress,
+    item_id: id, title, author, category, progress,
   } = book;
+
   return (
     <li key={id} className="book-list">
       <div className="book-info">
@@ -25,7 +24,7 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string,
