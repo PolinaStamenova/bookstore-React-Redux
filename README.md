@@ -15,10 +15,6 @@ The Bookstore is a website, that displays a list of books with option: to add, r
 - `React`
 - `Redux`
 
-## Live Version Link
-
-[Click Here!](XXXXXXXXXXXXXXXXxx)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
