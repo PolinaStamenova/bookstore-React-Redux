@@ -1,29 +1,43 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 import { addBook } from '../../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('Action');
 
-  const handleChange = (e) => {
-    setTitle(e.target.value);
+  const createBook = (book) => {
+    console.log('Heeeelooooo');
+    axios
+      .post(
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oJEPI79UO3J8dyQm6m6H/books',
+        book,
+      )
+      .then((res) => {
+        console.log(res);
+        if (res.status === 201) {
+          dispatch(addBook(book));
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-  const handleChangeAgain = (e) => setAuthor(e.target.value);
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const book = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
-      author,
+      category,
     };
-
-    dispatch(addBook(book));
+    book.id = book.item_id;
+    console.log(category);
+    createBook(book);
     setTitle('');
-    setAuthor('');
   };
 
   return (
@@ -34,20 +48,17 @@ const AddBook = () => {
           value={title}
           placeholder="Book title"
           required
-          onChange={handleChange}
-        />
-        <input
-          value={author}
-          placeholder="Book author"
-          required
-          onChange={handleChangeAgain}
+          onChange={(e) => setTitle(e.target.value)}
         />
 
-        <select placeholder="Categorie">
-          <option value="">Categorie</option>
-          <option>Action</option>
-          <option>Science Fiction</option>
-          <option>Economy</option>
+        <select
+          placeholder="Categorie"
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          {/* <option value="">Categorie</option> */}
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
         </select>
         <button type="submit">ADD BOOK</button>
       </form>
