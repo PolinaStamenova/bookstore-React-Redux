@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import progressCircle from './BookProgress.png';
 
 const BookProgress = ({ progress }) => {
   const { currentChapter, completed } = progress;
@@ -6,16 +7,20 @@ const BookProgress = ({ progress }) => {
   return (
     <div className="book-progress">
       <div className="book-progress-visualisation">
-        <p>circle</p>
-        <div>
-          <p>{`${completed} %`}</p>
-          <span>completed</span>
+        <img src={progressCircle} alt="Progress circle" className="circle" />
+        <div className="persentage">
+          <p className="display-per">{`${completed} %`}</p>
+          <p className="text">Completed</p>
         </div>
       </div>
       <div className="book-progress-update">
-        <p>CURRENT CAHPTER</p>
-        <p>{currentChapter}</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <div className="curent-chapter-wrapper">
+          <p className="text">CURRENT CHAPTER</p>
+          <p className="chapter">{currentChapter}</p>
+          <button type="button" className="update-button">
+            UPDATE PROGRESS
+          </button>
+        </div>
       </div>
     </div>
   );
