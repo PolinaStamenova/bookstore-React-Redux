@@ -36,24 +36,28 @@ const AddBook = () => {
 
   return (
     <article>
-      <h3>ADD NEW BOOK</h3>
+      <h3 className="add-book-title">ADD NEW BOOK</h3>
       <form onSubmit={submitBookToStore}>
         <input
           value={title}
           placeholder="Book title"
           required
+          className="add-book-holders"
           onChange={(e) => setTitle(e.target.value)}
         />
 
         <select
           placeholder="Categorie"
+          className="add-book-holders"
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="Action">Action</option>
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
         </select>
-        <button type="submit">ADD BOOK</button>
+        <button type="submit" className="submit-button">
+          ADD BOOK
+        </button>
       </form>
     </article>
   );

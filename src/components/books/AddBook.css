@@ -1,0 +1,60 @@
+article {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  padding-top: 2.813rem;
+  border-top: 1px solid #e8e8e8;
+  margin-bottom: 16rem;
+}
+
+.add-book-title {
+  opacity: 0.46;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #121212;
+}
+
+.add-book-holders {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  gap: 2.125rem;
+  margin-top: 1.9rem;
+}
+
+select {
+  background-color: #fff;
+  color: rgb(222, 222, 225);
+}
+
+input {
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgb(222, 222, 225);
+}
+
+option {
+  padding-right: 1rem;
+  width: 25rem;
+}
+
+.submit-button {
+  height: 100%;
+  padding: 1.1rem 4rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-family: "Roboto Slab", serif;
+  background-color: #0290ff;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
