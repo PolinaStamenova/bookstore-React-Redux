@@ -1,0 +1,22 @@
+.book-action {
+  margin-top: 1.313rem;
+  display: flex;
+  gap: 0.938rem;
+}
+
+.action-button {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #4386bf;
+  opacity: 0.6;
+}
+
+.button-remove {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 0 0.938rem;
+}
