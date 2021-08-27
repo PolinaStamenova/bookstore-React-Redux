@@ -1,19 +1,45 @@
-ul {
-  width: 80%;
+.list {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-list {
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
 
 .book-info {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 0 1.75rem 1.688rem;
 }
 
-.book-progress {
-  display: flex;
-  gap: 8rem;
+.book-cat {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #121212;
 }
 
-.book-progress-update {
-  width: 400px;
+.book-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book-author {
+  font-family: "Roboto Slab", serif;
+  opacity: 0.6;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #4386bf;
 }

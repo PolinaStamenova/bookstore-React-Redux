@@ -20,11 +20,19 @@ const BookAction = ({ id }) => {
 
   return (
     <div className="book-action">
-      <button type="button">Comments</button>
-      <button type="button" onClick={deleteBook}>
+      <button type="button" className="action-button">
+        Comments
+      </button>
+      <button
+        type="button"
+        className="action-button button-remove"
+        onClick={deleteBook}
+      >
         Remove
       </button>
-      <button type="button">Edit</button>
+      <button type="button" className="action-button">
+        Edit
+      </button>
     </div>
   );
 };

@@ -11,9 +11,9 @@ const Book = ({ book }) => {
     <li key={id} className="book-list">
       <div className="book-info">
         <div>
-          <p>{category}</p>
-          <h4>{title}</h4>
-          <p>{author}</p>
+          <p className="book-cat">{category}</p>
+          <h4 className="book-title">{title}</h4>
+          <p className="book-author">{author}</p>
           <BookAction id={id} />
         </div>
         <BookProgress progress={progress} />
